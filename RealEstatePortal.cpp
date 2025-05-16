@@ -288,35 +288,41 @@ void RealEstatePortal::compareProperties() {
     }
 }
 void RealEstatePortal:: searchProperties(){
-    string locationFilter; // Removed std::
-    double minPrice ;                   // Minimum price of $300,000
-    double maxPrice;                   // Maximum price of $600,000
-    int minBedrooms ;                          // Minimum of 2 bedrooms
-    string typeFilter ;         // Removed std:: // Search specifically for apartments
-    float minarea;             // Minimum square footage of 1000
-    float maxarea;             // Maximum square footage of 2000
+    string locationFilter;
+    double minPrice ;      
+    double maxPrice ;
+    int minBedrooms;
+    string typeFilter;
+    float minarea ;
+    float maxarea;
 
-     cout << "Enter location filter (leave empty for no filter): ";
+    cout << "Enter location filter (leave empty for no filter): ";
     getline(cin, locationFilter);
 
+    string input;
+
     cout << "Enter minimum price (e.g., 300000): ";
-    cin >> minPrice;
+    getline(cin, input);
+    minPrice = input.empty() ? 0 : stod(input);
 
     cout << "Enter maximum price (e.g., 600000): ";
-    cin >> maxPrice;
+    getline(cin, input);
+    maxPrice = input.empty() ? numeric_limits<double>::max() : stod(input);
 
     cout << "Enter minimum number of bedrooms (e.g., 2): ";
-    cin >> minBedrooms;
+    getline(cin, input);
+    minBedrooms = input.empty() ? 0 : stoi(input);
 
-    cin.ignore(numeric_limits<streamsize>::max(), '\n'); // Clear the buffer
     cout << "Enter property type filter (leave empty for no filter): ";
     getline(cin, typeFilter);
 
     cout << "Enter minimum square footage (e.g., 1000): ";
-    cin >> minarea;
+    getline(cin, input);
+    minarea = input.empty() ? 0 : stof(input);
 
     cout << "Enter maximum square footage (e.g., 2000): ";
-    cin >> maxarea;
+    getline(cin, input);
+    maxarea = input.empty() ? numeric_limits<float>::max() : stof(input);
 
     
     vector<Property> results;
