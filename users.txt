@@ -1,0 +1,1 @@
+1|saif|pass123|john@example.com|01012345678|1
