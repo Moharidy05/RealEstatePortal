@@ -398,7 +398,7 @@ void Admin::manageUser(vector<User>& users) {
             continue; // Go back to the start of the loop
         }
 
-        if (choice == 4) { // Changed to 4 for consistency
+        if (choice == 5) { // Changed to 4 for consistency
             break; // Exit the loop
         }
 
