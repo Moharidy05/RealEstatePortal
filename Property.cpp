@@ -4,14 +4,14 @@
 #include <unordered_map>
 #include <string>
 #include <limits> // Required for numeric_limits
-#include"User.h"
+#include "User.h"
 using namespace std; // Included as requested
 
 // Definition of the Property struct's display function
 
 void Property::display() {
     cout << "ID: " << id << "\nLocation: " << location << "\nPrice: " << price
-         << "\nDescription: " << description << "\nBedrooms: " << bedrooms
+         << "\nDescription: " << description << "\nBedrooms: " << bedrooms << "\nType: " << type
          << "\nHighlighted: " << (isHighlighted ? "Yes" : "No")
          << "\nApproved: " << (approved ? "Yes" : "No") << "\n"; // Added approved status
 }
